@@ -1,0 +1,38 @@
+
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 900">
+  <defs>
+    <radialGradient id="heartGlow">
+      <stop offset="0" stop-color="#ff174f" stop-opacity=".55"/>
+      <stop offset="1" stop-color="#450014" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="heartColor" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ff8aa6"/>
+      <stop offset=".45" stop-color="#e00039"/>
+      <stop offset="1" stop-color="#69001d"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="13" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  <circle cx="450" cy="450" r="410" fill="url(#heartGlow)"/>
+  <g fill="none" stroke="#ff456f" stroke-width="25" stroke-linecap="round" filter="url(#glow)">
+    <path d="M390 300 C340 200 370 100 440 90 C500 85 510 165 490 235"/>
+    <path d="M480 260 C480 145 550 105 610 145 C650 175 625 245 585 300"/>
+    <path d="M370 340 C270 290 220 350 250 420"/>
+  </g>
+  <path d="M450 320 C350 220 190 290 210 440 C225 570 365 690 450 770 C545 680 690 555 700 430 C710 285 555 230 450 320Z"
+        fill="url(#heartColor)" stroke="#ff91aa" stroke-width="12" filter="url(#glow)"/>
+  <path d="M450 340 C390 400 390 490 450 550 C510 485 550 400 450 340Z"
+        fill="#a90032" opacity=".65"/>
+  <g fill="none" stroke="#ffb2c2" stroke-width="8" opacity=".8">
+    <path d="M450 325 C410 400 420 460 450 500"/>
+    <path d="M450 500 C390 560 365 620 350 660"/>
+    <path d="M450 500 C515 550 545 615 565 650"/>
+  </g>
+  <path d="M80 465 H290 L325 425 L355 505 L390 450 H520 L550 410 L580 490 L610 465 H820"
+        fill="none" stroke="#ff527b" stroke-width="8" filter="url(#glow)"/>
+</svg>
