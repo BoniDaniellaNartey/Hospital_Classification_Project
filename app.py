@@ -19,7 +19,11 @@ from pydantic import BaseModel, Field
 # ==========================================
 
 BASE_DIR = Path(__file__).resolve().parent
-DATABASE = BASE_DIR / "heartcare.db"
+import os
+
+DATABASE = Path(
+    os.environ.get("DATABASE_PATH", "/tmp/heartcare.db")
+)
 MODEL_PATH = BASE_DIR / "heart_disease_model.pkl"
 
 app = FastAPI(title="HeartCare - Heart Disease Prediction")
